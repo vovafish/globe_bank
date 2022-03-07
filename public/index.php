@@ -42,8 +42,8 @@
 
   if(isset($page)) {
     //show the page from database
-    // TODO add html escape 
-    echo $page['content'];
+    $allowed_tags = '<div><img><h1><h2><p><br><strong><em><ul><li>';
+    echo strip_tags($page['content'], $allowed_tags);
   } else {
 
     include(SHARED_PATH . '/static_homepage.php'); 
