@@ -145,8 +145,7 @@ navigation li {
 }
 
 #page p {
-  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-  font-size: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif" font-size: 12px;
   color: #000000;
   padding: 0px;
   line-height: normal;

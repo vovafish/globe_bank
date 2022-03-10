@@ -112,8 +112,12 @@
     return $page_count === 0;
   }
 
-  function has_unique_username($username, $current_id="0")
-  {
+  // has_unique_username('johnqpublic')
+  // * Validates uniqueness of admins.username
+  // * For new records, provide only the username.
+  // * For existing records, provide current ID as second argument
+  //   has_unique_username('johnqpublic', 4)
+  function has_unique_username($username, $current_id="0") {
     global $db;
 
     $sql = "SELECT * FROM admins ";

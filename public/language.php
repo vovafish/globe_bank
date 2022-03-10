@@ -10,7 +10,7 @@ if(is_post_request()) {
 
 } else {
   // Read the stored value (if any)
-  $language = $_COOKIE['language'] ?? 'Any';
+  $language = $_COOKIE['language'] ?? 'None';
 }
 
 ?>
