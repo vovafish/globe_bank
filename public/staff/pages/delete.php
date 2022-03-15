@@ -25,19 +25,21 @@ if(is_post_request()) {
 
 <div id="content">
 
-  <a class="back-link" href="<?php echo url_for('/staff/pages/index.php'); ?>">&laquo; Back to List</a>
+    <a class="back-link"
+        href="<?php echo url_for('/staff/subjects/show.php?id=' . h(u($page['subject_id']))); ?>">&laquo;
+        Back to
+        Subject Page</a>
+    <div class="page delete">
+        <h1>Delete Page</h1>
+        <p>Are you sure you want to delete this page?</p>
+        <p class="item"><?php echo h($page['menu_name']); ?></p>
 
-  <div class="page delete">
-    <h1>Delete Page</h1>
-    <p>Are you sure you want to delete this page?</p>
-    <p class="item"><?php echo h($page['menu_name']); ?></p>
-
-    <form action="<?php echo url_for('/staff/pages/delete.php?id=' . h(u($page['id']))); ?>" method="post">
-      <div id="operations">
-        <input type="submit" name="commit" value="Delete Page" />
-      </div>
-    </form>
-  </div>
+        <form action="<?php echo url_for('/staff/pages/delete.php?id=' . h(u($page['id']))); ?>" method="post">
+            <div id="operations">
+                <input type="submit" name="commit" value="Delete Page" />
+            </div>
+        </form>
+    </div>
 
 </div>
 
