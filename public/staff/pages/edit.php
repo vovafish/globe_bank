@@ -34,9 +34,8 @@ if(is_post_request()) {
 
 }
 
-$page_set = find_all_pages();
-$page_count = mysqli_num_rows($page_set);
-mysqli_free_result($page_set);
+$page_count = count_pages_by_subject_id($page['subject_id']);
+
 
 ?>
 
@@ -45,7 +44,7 @@ mysqli_free_result($page_set);
 
 <div id="content">
 
-    <a class="back-link" href="<?php echo url_for('/staff/subjects/show.php?id=' . h(u($subject['id']))); ?>">&laquo;
+    <a class="back-link" href="<?php echo url_for('/staff/subjects/show.php?id=' . h(u($page['subject_id']))); ?>">&laquo;
         Back to
         Subject Page</a>
     <div class="page edit">
